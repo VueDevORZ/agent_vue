@@ -6,7 +6,7 @@ import router from './router'
 
 import $ from 'jquery'
 
-import './assets/css/bootstrap.min.css'  
+import './assets/css/bootstrap.min.css'
 import './assets/js/bootstrap.min'
 
 
@@ -17,11 +17,9 @@ import 'mint-ui/lib/style.css'
 Vue.use(MintUi)
 
 // 导入MUI
-import MUI from './libs/mui-master/dist/js/mui.min.js'
-import './libs/mui-master/dist/css/mui.min.css'
+import './libs/mui-master/js/mui.js'
+//import './libs/mui-master/sass/mui.scss'
 import './libs/mui-master/examples/hello-mui/css/icons-extra.css'
-
-
 
 Vue.config.productionTip = false
 

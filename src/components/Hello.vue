@@ -32,78 +32,60 @@
       <div class="data">
          <div class="data_title">代理人数据</div>
 
-         <div class="mui-slider">
+         <div class="mui-slider ">
 		        <div class="mui-slider-group mui-slider-loop">
-		        	<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一个图文表格) -->
 		            <div class="mui-slider-item mui-slider-item-duplicate">
-		                <ul class="mui-table-view mui-grid-view">
-		                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="../assets/images/cbd.jpg">
-		                            <div class="mui-media-body">Color of SIP CBD</div></a></li>
-		                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="../assets/images/cbd.jpg">
-		                            <div class="mui-media-body">静静看这世界</div></a></li>
+		                <ul class="mui-table-view mui-grid-view data_ul data_ul01">
+		                    <li class="mui-table-view-cell mui-media mui-col-xs-6 active">
+                        <router-link to="/myAgentAll/myAgent">
+                              <p>120</p>
+                              <p>我的代理人</p>
+                        </router-link>
+                            
+                        </li>
+		                     <li class="mui-table-view-cell mui-media mui-col-xs-6">
+                               <p>20</p>
+                              <p>待审核</p>
+                        </li>
+                          <li class="mui-table-view-cell mui-media mui-col-xs-6">
+                               <p>5</p>
+                               <p>今日审核</p>
+                        </li>
 		                </ul>
 		            </div>
-		            <div class="mui-slider-item">
-		                <ul class="mui-table-view mui-grid-view">
-		                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="../assets/images/cbd.jpg">
-		                            <div class="mui-media-body">幸福就是可以一起睡觉</div></a></li>
-		                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="../assets/images/cbd.jpg">
-		                            <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
-		                </ul>
-		            </div>
-		            <div class="mui-slider-item">
-		                <ul class="mui-table-view mui-grid-view">
-		                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="../assets/images/cbd.jpg">
-		                            <div class="mui-media-body">Color of SIP CBD</div></a></li>
-		                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="../assets/images/cbd.jpg">
-		                            <div class="mui-media-body">静静看这世界</div></a></li>
-		                </ul>
-		            </div>
-		            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一个图文表格) -->
-		            <div class="mui-slider-item mui-slider-item-duplicate">
-		                <ul class="mui-table-view mui-grid-view">
-		                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="../assets/images/cbd.jpg">
-		                            <div class="mui-media-body">幸福就是可以一起睡觉</div></a></li>
-		                    <li class="mui-table-view-cell mui-media mui-col-xs-6"><a href="#"><img class="mui-media-object" src="../assets/images/cbd.jpg">
-		                            <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
-		                </ul>
-		            </div>
-		        </div>
-		        <div class="mui-slider-indicator" style="position: static;background-color: #fff;">
-		            <span class="mui-action mui-action-previous mui-icon mui-icon-back"></span>
-		            <div class="mui-number">
-		                <span>1</span> / 2
-		            </div>
-		            <span class="mui-action mui-action-next mui-icon mui-icon-forward"></span>
-		        </div>
+		       </div>
 		    </div>
 
-         <div class="add">添加代理人</div>
+         <div class="add" style="line-height:0.5rem">添加代理人</div>
       </div>
       
 
       <div class="data buy">
          <div class="data_title">购买代理人</div>
 
-         <ul class="data_ul">
-           <li >
-              <p><span>20</span>元</p>
-              <p><span>1</span>个代理人权限</p>
-           </li>
-           <li >
-              <p><span>200</span>元</p>
-              <p><span>10</span>个代理人权限</p>
-           </li>
-           <li >
-              <p><span>400</span>元</p>
-              <p><span>20</span>个代理人权限</p>
-           </li>
-           <li >
-              <p><span>400</span>元</p>
-              <p><span>20</span>个代理人权限</p>
-           </li>
-         </ul>
 
+
+  <div class="mui-slider ">
+		        <div class="mui-slider-group mui-slider-loop">
+		            <div class="mui-slider-item mui-slider-item-duplicate">
+		                <ul class="mui-table-view mui-grid-view data_ul data_ul02">
+		                    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+                              <p><span>20</span>元</p>
+                              <p><span>1</span>个代理人权限</p>
+                        </li>
+		                     <li class="mui-table-view-cell mui-media mui-col-xs-6">
+                               <p><span>200</span>元</p>
+                                <p><span>10</span>个代理人权限</p>
+                        </li>
+                          <li class="mui-table-view-cell mui-media mui-col-xs-6">
+                               <p><span>400</span>元</p>
+                              <p><span>20</span>个代理人权限</p>
+                        </li>
+		                </ul>
+		            </div>
+		       </div>
+		    </div>
+        
          <div class="add">已经拥有10个代理人权限</div>
       </div>
    </div>
@@ -116,57 +98,27 @@ import $ from "jquery";
        
       }
     },
-    mounted(){
+     created() {
+
+          
+        },
+    methods:{
+      toggle:function(){
+         $(".data_ul01 li").click(function(){
+           console.log
+           $(this).addClass('active').siblings("li").removeClass('active')
+         })
+      }
+    },
+    
+     mounted(){
+         this.toggle();
+
       mui('.mui-slider').scroll({
 	      deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
-});
+       });
     }
-  
-    // methods:{
-    //    move:function(){
-
-    //   var lis=document.querySelector('buy .data_ul');
     
-    //   /*加过渡*/
-    //   var addTransition = function(){
-    //     lis.style.transition = 'all 0.2s';
-    //     lis.style.webkitTransition = 'all 0.2s';/*兼容*/
-    //   }
-    // /*减过渡*/
-    // var removeTransition = function(){
-    //     lis.style.transition = 'none';
-    //     lis.style.webkitTransition = 'none';/*兼容*/
-    // }
-    // /*设置定位*/
-    // var setTranslateX = function(translateX){
-    //     lis.style.transform = 'translateX('+translateX+'px)';
-    //     lis.style.webkitTransform = 'translateX('+translateX+'px)';/*兼容*/
-    // }
-
-
-    // var startX = 0;/*记录开始的x的坐标*/
-    // var distance = 0;/*移动的距离*/
-    // var isMove = false;/*记录是否滑动过*/
-    // lis.addEventListener('touchstart',function(e){
-    //     /*记录开始滑动的时候的触摸点坐标*/
-    //     startX = e.touches[0].clientX;
-    //     console.log(startX)
-    // });
-    // lis.addEventListener('touchmove',function(e){
-    //    distance = e.touches[0].clientX-startX;
-    //    isMove=true;
-    //    console.log(1)
-    // })
-    //   lis.addEventListener('touchend',function(e){
-    //   //  if(distance)
-    // })
-
-
-    //    }
-    // },
-    //  mounted() {
-    //         this.move();
-    //     },
   }
 </script>
 <style scope>
@@ -176,6 +128,8 @@ import $ from "jquery";
       min-width:300px;
       width:100%;
       margin:0 auto;
+      padding-bottom:50px;
+      
     }
     header{
       width:100%;
@@ -315,6 +269,32 @@ import $ from "jquery";
 
 
 }
+
+
+.mui-table-view.mui-grid-view .mui-table-view-cell {
+    font-size: 17px;
+    display: inline-block;
+    margin-right: 0.4rem;
+    padding: 10px 0 0 0px;
+    text-align: center;
+    vertical-align: middle;
+    
+   
+}
+.data .data_ul02 .mui-table-view-cell{
+   background-image: linear-gradient(135deg, #B3B3B3 6%, #D2D1D1 100%);
+}
+.data .data_ul02 .mui-table-view-cell p:nth-child(2){
+   
+       background-image: linear-gradient(135deg, #BEBEBE 6%, #c8c8c8 100%);
+       line-height: 0.6rem;
+       font-size:0.2rem;
+}
+.data .data_ul02 .mui-table-view-cell p:nth-child(2) span{
+    font-size:0.32rem;
+}
+
+
 .data  .data_ul li{
     float:left;
     width:2.72rem;
@@ -329,6 +309,7 @@ import $ from "jquery";
   font-size:0.6rem;
   color: #404040;
   margin-top:0.15rem;
+  margin-bottom:0.3rem;
 }
 .data .data_ul li.active{
   background-image: linear-gradient(-135deg, #2694FF 0%, #1970E5 100%);
@@ -340,7 +321,7 @@ import $ from "jquery";
 
 .data .add{
   height:0.9rem;
-  line-height:0.9rem;
+  line-height:0.5rem;
   border-top:1px solid #ECECEC;
   opacity: 0.7;
   font-size: 0.28rem;

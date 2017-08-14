@@ -8,8 +8,12 @@
     }],
     "stage-2"
   ],
+<<<<<<< HEAD
 
   "plugins": ["transform-remove-strict-mode"],
+=======
+  "plugins": ["transform-runtime"],
+>>>>>>> d64606ff816c44c5b34607d0c7aa10f8b9094111
   "env": {
     "test": {
       "presets": ["env", "stage-2"],

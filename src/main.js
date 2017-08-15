@@ -14,19 +14,16 @@ import './assets/js/bootstrap.min'
 import MintUi from 'mint-ui'
 //  导入样式
 import 'mint-ui/lib/style.css'
-
-
-
 // 导入MUI
-import MUI from './libs/mui-master/dist/js/mui.min.js'
-import './libs/mui-master/dist/css/mui.min.css'
+//import MUI from './libs/mui-master/dist/js/mui.min.js'
+//import './libs/mui-master/dist/css/mui.min.css'
 import './libs/mui-master/examples/hello-mui/css/icons-extra.css'
 
 Vue.use(MintUi)
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
+
 new Vue({
   el: '#app',
   router,

@@ -88,6 +88,7 @@ body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dt,dd,li {
   font-family: "PingFangSC-Medium", "微软雅黑";
   color: #999999;
   list-style: none;
+  line-height: 1.42857143;
 }
 a {
   text-decoration: none;

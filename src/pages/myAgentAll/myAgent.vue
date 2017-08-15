@@ -7,15 +7,16 @@
       <div>333</div>
     </mt-header>
     <div class="search">
-      <input class="search_box" value="代理人">
+      <input class="search_box" placeholder="代理人">
+      <i></i>
     </div>
     <ul class="mui-table-view mui-table-view-chevron">
       <li class="mui-table-view-cell mui-media">
-        <a class="mui-navigate-right">
+        <router-link to="/myAgentAll/personAgent" class="mui-navigate-right">
           <div class="mui-media-body">
             唐永宣
           </div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media">
         <a class='mui-navigate-right' href="javascript:;">

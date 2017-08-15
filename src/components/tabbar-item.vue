@@ -21,9 +21,8 @@
     },
     methods:{
       pushtoPraents:function(){
-        this.$parent.$emit('input',this.id);
-
-        //这里写跳转
+        this.$parent.$emit('input',this.id)
+          //这里写跳转
         if (this.id === "tab2")
         {
           location.href = "http://www.baidu.com";
@@ -32,7 +31,6 @@
         {
           location.href = "http://www.dylancc.com";
         }
-
       }
     }
   }

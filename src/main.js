@@ -11,13 +11,13 @@ import './assets/js/bootstrap.min'
 
 
 // 导入Muit Ui
- import MintUi from 'mint-ui'
+import MintUi from 'mint-ui'
 //  导入样式
 import 'mint-ui/lib/style.css'
 
 
 
- // 导入MUI
+// 导入MUI
 import MUI from './libs/mui-master/dist/js/mui.min.js'
 import './libs/mui-master/dist/css/mui.min.css'
 import './libs/mui-master/examples/hello-mui/css/icons-extra.css'
@@ -31,5 +31,7 @@ new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App }
+  components: {
+    App
+  }
 })

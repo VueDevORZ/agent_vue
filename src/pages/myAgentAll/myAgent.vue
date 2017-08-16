@@ -2,7 +2,7 @@
   <div class="template">
     <mt-header title="我的代理人">
       <router-link to="/" slot="left">
-        <mt-button icon="back"></mt-button>
+        <mt-button icon="back" ></mt-button>
       </router-link>
       <div>333</div>
     </mt-header>
@@ -41,6 +41,9 @@
       return {
         value: ''
       }
+    },
+    methods: {
+      
     }
   }
 </script>
@@ -72,4 +75,15 @@
     overflow: hidden;
     text-align: left;
   }
+  .mint-header-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: inherit;
+    font-weight: 400;
+    color: #fff;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
 </style>

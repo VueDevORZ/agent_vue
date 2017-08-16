@@ -18,7 +18,7 @@
       <div class="message_title">我的信息 </div>
       <div class="message_left">
         <p> 我的提现</p>
-        <p>5000</p>
+        <p>{{items.wait_award_cash}}</p>
         <p>待提现（元）</p>
       </div>
       <div class="message_left message_right">
@@ -29,25 +29,31 @@
     </div>
     <div class="data">
       <div class="data_title">代理人数据</div>
-      <div class="mui-slider ">
-        <div class="mui-slider-group mui-slider-loop">
-          <div class="mui-slider-item mui-slider-item-duplicate">
-            <ul class="mui-table-view mui-grid-view data_ul data_ul01">
-              <li class="mui-table-view-cell mui-media mui-col-xs-6 active">
-                <router-link to="/myAgentAll/myAgent">
-                  <p>120</p>
-                  <p>我的代理人</p>
-                </router-link>
-              </li>
-              <li class="mui-table-view-cell mui-media mui-col-xs-6">
-                <p>20</p>
-                <p>待审核</p>
-              </li>
-              <li class="mui-table-view-cell mui-media mui-col-xs-6">
-                <p>5</p>
-                <p>今日审核</p>
-              </li>
-            </ul>
+      <div id="slider" class="mui-slider">
+        <div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+          <div class="mui-scroll data_ul data_ul01">
+            <li class="mui-table-view-cell mui-media mui-col-xs-6 active">
+              <router-link to="/myAgentAll/myAgent">
+                <p>120</p>
+                <p>我的代理人</p>
+              </router-link>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-6">
+              <p>20</p>
+              <p>待审核</p>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-6">
+              <p>5</p>
+              <p>今日审核</p>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-6">
+              <p>5</p>
+              <p>今日审核</p>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-6">
+              <p>5</p>
+              <p>今日审核</p>
+            </li>
           </div>
         </div>
       </div>
@@ -55,23 +61,25 @@
     </div>
     <div class="data buy">
       <div class="data_title">购买代理人</div>
-      <div class="mui-slider ">
-        <div class="mui-slider-group mui-slider-loop">
-          <div class="mui-slider-item mui-slider-item-duplicate">
-            <ul class="mui-table-view mui-grid-view data_ul data_ul02">
-              <li class="mui-table-view-cell mui-media mui-col-xs-6">
-                <p><span>20</span>元</p>
-                <p><span>1</span>个代理人权限</p>
-              </li>
-              <li class="mui-table-view-cell mui-media mui-col-xs-6">
-                <p><span>200</span>元</p>
-                <p><span>10</span>个代理人权限</p>
-              </li>
-              <li class="mui-table-view-cell mui-media mui-col-xs-6">
-                <p><span>400</span>元</p>
-                <p><span>20</span>个代理人权限</p>
-              </li>
-            </ul>
+      <div class="mui-slider">
+        <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+          <div class="mui-scroll data_ul data_ul02">
+            <li class="mui-table-view-cell mui-media mui-col-xs-6">
+              <p><span>20</span>元</p>
+              <p><span>1</span>个代理人权限</p>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-6">
+              <p><span>200</span>元</p>
+              <p><span>10</span>个代理人权限</p>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-6">
+              <p><span>400</span>元</p>
+              <p><span>20</span>个代理人权限</p>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-6">
+              <p><span>400</span>元</p>
+              <p><span>20</span>个代理人权限</p>
+            </li>
           </div>
         </div>
       </div>
@@ -82,38 +90,70 @@
 
 <script type=es6>
   import $ from "jquery";
+  import mui from './../libs/mui-master/dist/js/mui.min.js'
   export default {
     data() {
       return {
+        items: {}
       }
     },
+    // 在内存中初始化时间和data，没有加载到页面中
     created() {
       this.getData();
     },
-    methods: {
-      getData() {
-        this.$http.get('http://api.jihes.com/agent/home_page').then(data => {
-          console.log(data)
-        })
-      },
-      toggle: function() {
-        $(".data_ul01 li").click(function() {
-          console.log
-          $(this).addClass('active').siblings("li").removeClass('active')
-        })
-      }
-    },
+    // 在页面中已经创建好的
     mounted() {
+      this.setWidth();
       this.toggle();
-      mui('.mui-slider').scroll({
+      // 加载滑动滑动
+      mui('.mui-scroll-wrapper').scroll({
         deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
       });
+    },
+    methods: {
+      getData() {
+        // jsonp请求
+        $.ajax({
+          url: '/agent/home_page',
+          type: 'get',
+          dataType: "json",
+          success: function(data) {
+            console.log(data)
+          }
+        })
+        // this.$http.get('/agent/home_page').then(data => {
+        //   console.log(data)
+        // });
+      },
+      // 点击切换颜色
+      toggle: function() {
+        $(".data_ul01 li").click(function() {
+          $(this).addClass('active').siblings("li").removeClass('active')
+        })
+      },
+      // 设置ul li的宽度
+      setWidth: function() {
+        var ul01 = $(".data_ul01");
+        var ul02 = $(".data_ul02");
+        var lis = $('.data_ul01 li');
+        var li2s = $('.data_ul02 li');
+        var lis_length = lis.length;
+        var li2s_length = li2s.length;
+        //  所有li的宽度
+        var lisWidth = 2.8 * lis.length + 0.4 * lis.length + 'rem';
+        var li2sWidth = 2.8 * li2s.length + 0.4 * li2s.length + 'rem';
+        ul01.width(lisWidth);
+        ul02.width(li2sWidth);
+      }
     }
   }
 </script>
 
 <style scope>
   @import '../assets/css/base.css';
+  * {
+    touch-action: none;
+  }
   .template {
     max-width: 750px;
     min-width: 300px;
@@ -246,10 +286,17 @@
   }
   .data .data_ul {
     overflow: hidden;
-    width: 12.86rem;
     margin-bottom: 0.3rem;
     margin-top: 0.12rem;
     padding-left: 0.2rem;
+  }
+  .mui-segmented-control.mui-scroll-wrapper {
+    height: 2.3rem;
+  }
+  .mui-segmented-control.mui-scroll-wrapper .mui-scroll {
+    width: auto;
+    height: 2.3rem;
+    white-space: nowrap;
   }
   .mui-table-view.mui-grid-view .mui-table-view-cell {
     font-size: 17px;
@@ -273,7 +320,7 @@
   .data .data_ul li {
     float: left;
     width: 2.72rem;
-    height: 1.74rem;
+    height: 2rem;
     margin-right: 0.4rem;
     background-image: linear-gradient(0deg, #FDFDFD 0%, #FFFFFF 100%);
     box-shadow: 0 0 6px 0 rgba(202, 202, 202, 0.52);
@@ -294,7 +341,7 @@
   }
   .data .add {
     height: 0.9rem;
-    line-height: 0.5rem;
+    line-height: 0.9rem;
     border-top: 1px solid #ECECEC;
     opacity: 0.7;
     font-size: 0.28rem;

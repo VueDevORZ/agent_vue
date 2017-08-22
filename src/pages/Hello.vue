@@ -18,7 +18,7 @@
       <div class="message_title">我的信息 </div>
       <div class="message_left">
         <p> 我的提现</p>
-        <p>{{items.wait_award_cash}}</p>
+        <p>{{items.bub}}</p>
         <p>待提现（元）</p>
       </div>
       <div class="message_left message_right">
@@ -90,16 +90,23 @@
 
 <script type=es6>
   import $ from "jquery";
+  
   import mui from './../libs/mui-master/dist/js/mui.min.js'
+
+
   export default {
     data() {
       return {
-        items: {}
+
+         items:{},
+        //  todos:  { text: '学习 JavaScript' },
+    
       }
     },
     // 在内存中初始化时间和data，没有加载到页面中
     created() {
-      this.getData();
+      this.getInfo();
+     
     },
     // 在页面中已经创建好的
     mounted() {
@@ -111,19 +118,17 @@
       });
     },
     methods: {
-      getData() {
-        // jsonp请求
+     
+      getInfo: function() {
+        var that=this;
         $.ajax({
-          url: '/agent/home_page',
-          type: 'get',
-          dataType: "json",
+          url: 'http://api.douban.com/labs/bubbler/user/ahbei',
+          crossOrigin: true,
           success: function(data) {
-            console.log(data)
-          }
+             that.items=JSON.parse(data).stats;
+             console.log(that.items)
+          },
         })
-        // this.$http.get('/agent/home_page').then(data => {
-        //   console.log(data)
-        // });
       },
       // 点击切换颜色
       toggle: function() {

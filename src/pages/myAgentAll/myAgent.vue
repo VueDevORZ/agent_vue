@@ -4,7 +4,7 @@
       <router-link to="/" slot="left">
         <mt-button icon="back" ></mt-button>
       </router-link>
-      <div>333</div>
+      
     </mt-header>
     <div class="search">
       <input class="search_box" placeholder="代理人">

@@ -7,7 +7,7 @@ import router from './router'
 import $ from 'jquery'
 
 import './assets/css/bootstrap.min.css'
-import './assets/js/bootstrap.min'
+import './assets/js/bootstrap.min.js'
 
 
 // 导入Muit Ui
@@ -23,11 +23,13 @@ Vue.use(MintUi)
 
 
 // 导入vue-resource组件
-let VueResource = require('vue-resource');
+import VueResource from 'vue-resource';
 // 注册vue-resource组件
 Vue.use(VueResource);
 // Vue.http.options.emulateJSON = true;
 
+
+import './assets/ajax-cross-origin/js/jquery.ajax-cross-origin.min.js'
 
 
 // 导入moment处理日期

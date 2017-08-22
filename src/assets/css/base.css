@@ -104,7 +104,21 @@ img {
   border: 0 none;
   outline-style: none;
   margin: 0;
+  font-size: 0.28rem;
   padding: 0;
+}
+
+input::-webkit-input-placeholder{
+    color: #c1c1c1;
+}
+input:-ms-input-placeholder{
+    color: #c1c1c1;
+}
+input::-moz-placeholder{
+    color: #c1c1c1;
+}
+input:-ms-input-placeholder{
+    color: #c1c1c1;
 }
 .clearfix:after {
   content: "";

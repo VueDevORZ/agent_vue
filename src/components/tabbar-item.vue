@@ -30,6 +30,10 @@
         else  if (this.id === "tab3")
         {
           location.href = "http://www.dylancc.com";
+        } 
+        else  if (this.id === "tab1")
+        {
+          location.href = "http://localhost:8083/#/";
         }
       }
     }
